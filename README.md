@@ -1,106 +1,187 @@
 # 🛺 Apni Riksha - Auto Rickshaw Booking System
 
-### **MERN Stack | Real-Time Ride Booking | Map Integration**
+[![MERN Stack](https://img.shields.io/badge/MERN-Stack-blue)](https://mern.io/)
+[![React](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-green)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-7.x-green)](https://www.mongodb.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📌 Project Overview
-Apni Riksha is a **mobile web-based auto rickshaw booking system** designed for **college students and local residents**. It connects **passengers with auto drivers** efficiently, ensuring **quick bookings, real-time tracking, and a hassle-free experience**.
+A modern, real-time auto rickshaw booking system built with the MERN stack, designed to connect passengers with drivers efficiently through seamless booking and live tracking.
 
-## 🔥 Features  
-✅ **Seamless Booking** – Quick and easy ride booking system.  
-✅ **Real-Time Tracking** – Google Maps API integration for live tracking.  
-✅ **Secure Authentication** – JWT-based login system for users and drivers.  
-✅ **Driver Management** – Auto drivers can accept/reject ride requests.  
-✅ **Emergency Support** – Fast booking for urgent situations.  
-✅ **Responsive UI** – Mobile-friendly design using **React.js & Tailwind CSS**.  
+## 📋 Table of Contents
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Screenshots](#-screenshots)
+- [Demo Video](#-demo-video)
+- [Installation](#-installation)
+- [Project Structure](#-project-structure)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Contact](#-contact)
 
-## 🛠️ Tech Stack  
-- **Frontend:** React.js, Tailwind CSS  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB  
-- **Real-Time Communication:** Socket.io  
-- **API & Services:** Maps API, JWT Authentication  
+## 🔥 Features
 
-## 📸 Screenshots  
+- **Seamless Ride Booking**: Intuitive interface for quick and easy ride requests
+- **Real-Time Tracking**: Leaflet-powered live location tracking for both users and drivers
+- **Secure Authentication**: JWT-based authentication system for users and drivers
+- **Driver Management**: Comprehensive system for drivers to accept/reject ride requests
+- **Emergency Support**: Priority booking for urgent situations
+- **Responsive Design**: Mobile-first UI built with React.js and Tailwind CSS
+- **Real-Time Communication**: Socket.io integration for instant updates
 
-![Home page](/images/image.png)
+## 🛠️ Tech Stack
 
-## User Pages
+### Frontend
+- **React.js** - UI library for building user interfaces
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Leaflet** - Interactive maps for location services
+- **Vite** - Fast build tool and development server
 
-![user](/images/image-1.png)
-![map](/images/image-2.png)
-![fare](/images/image-3.png)
-![confirm](/images/image-4.png)
-![looking driver](/images/image-8.png)
-![rider_details](/images/image-7.png)
-![ride complete](/images/image-5.png)
+### Backend
+- **Node.js** - JavaScript runtime environment
+- **Express.js** - Web application framework
+- **MongoDB** - NoSQL database
+- **Socket.io** - Real-time bidirectional communication
 
+### Additional Tools
+- **JWT** - JSON Web Tokens for authentication
+- **Axios** - HTTP client for API requests
+- **bcrypt** - Password hashing
+- **Nodemon** - Development utility for auto-restarting server
 
-## Saarthi Pages
+## 📸 Screenshots
 
-![rider register](/images/rimage.png)
-![rider login](/images/rimage1.png)
-![ride pop up](/images/rimage-2.png)
-![ride details](/images/rimage%203.png)
-![ride complate](/images/rimage%204.png)
-![fare](/images/rimage%205.png)
+### Home Page
+![Home Page](./images/image.png)
 
+### User Interface
+![User Login](./images/image-1.png)
+![Map View](./images/image-2.png)
+![Fare Estimation](./images/image-3.png)
+![Ride Confirmation](./images/image-4.png)
+![Looking for Driver](./images/image-8.png)
+![Driver Details](./images/image-7.png)
+![Ride Complete](./images/image-5.png)
 
-## 🚀 Getting Started  
+### Driver (Saarthi) Interface
+![Driver Registration](./images/rimage.png)
+![Driver Login](./images/rimage1.png)
+![Ride Request Popup](./images/rimage-2.png)
+![Ride Details](./images/rimage%203.png)
+![Ride Completion](./images/rimage%204.png)
+![Earnings](./images/rimage%205.png)
 
-### **1️⃣ Clone the Repository**
-```bash
-git clone https://github.com/kaustav3071/SGP-Apni-Riksha.git
-cd SGP-Apni-Riksha
+## 🎥 Demo Video
+
+<video width="100%" controls>
+  <source src="./video/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+*Watch the full demo video showcasing the application's features and user experience.*
+
+## 🚀 Installation
+
+### Prerequisites
+- Node.js (v18 or higher)
+- MongoDB (local or cloud instance)
+- Git
+
+### Setup Instructions
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/kaustav3071/Apni-Riksha.git
+   cd Apni-Riksha
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   # Install backend dependencies
+   cd backend
+   npm install
+
+   # Install frontend dependencies
+   cd ../frontend
+   npm install
+   ```
+
+3. **Environment Configuration**
+   ```bash
+   # Create .env files in both backend and frontend directories
+   # Refer to .env.example files for required variables
+   ```
+
+4. **Start the Application**
+   ```bash
+   # Start backend server (from backend directory)
+   npm start
+
+   # Start frontend development server (from frontend directory)
+   npm run dev
+   ```
+
+5. **Access the Application**
+   - Frontend: http://localhost:5173
+   - Backend API: http://localhost:4000
+
+## 🏗️ Project Structure
+
 ```
-### **2️⃣ Install Dependencies**
-```bash
-npm install
+Apni-Riksha/
+├── frontend/                 # React.js frontend application
+│   ├── src/
+│   │   ├── components/       # Reusable UI components
+│   │   ├── pages/           # Application pages/routes
+│   │   ├── context/         # React context providers
+│   │   └── assets/          # Static assets
+│   ├── public/              # Public static files
+│   └── package.json
+├── backend/                  # Node.js backend application
+│   ├── controllers/         # Route controllers
+│   ├── models/             # MongoDB models
+│   ├── routes/             # API routes
+│   ├── services/           # Business logic services
+│   ├── middlewares/        # Custom middlewares
+│   └── package.json
+├── images/                  # Screenshots and images
+├── video/                   # Demo videos
+├── README.md               # Project documentation
+└── LICENSE                 # MIT License
 ```
-### **3️⃣ Run the Development Server**
-Backend (Express Server)
-```bash
-cd backend
-nodemon server.js
-```
-Frontend (React App)
-```bash
-cd frontend
-npm run dev
-```
-### **🏗️ Project Structure**
-```bash
-/SGP-APNI-RICKSAHW
-│── /frontend   # React.js Frontend
-│── /backend    # Node.js Backend\
-│── .gitignore
-|── LICENSE
-│── README.md
-```
-### **📌 Future Enhancements**
-- Online Payments (UPI, Paytm, GPay)<br>
-- AI-based Ride Suggestions<br>
-- Multilingual Support<br>
-- Expand to Nearby Cities<br>
 
-## 👥 Contributors  
-We are a team of four developers working on this project:  
+## 🤝 Contributing
 
-| Name                | GitHub Profile                               | Role                         |
-|---------------------|----------------------------------------------|------------------------------|
-| **KAUSTAV DAS**     | [GitHub](https://github.com/kaustav3071)     | Backend, Frontend & Database |
-| **KURESH GARBADA**  | [GitHub](https://github.com/Kuresh-Garbada) | Backend                      |
-| **BHAVYA GODHAVIYA**| [GitHub](https://github.com/Bhavya-Godhaviya)| Diagrams                     |
-| **HARSH GOSWAMI**   | [GitHub](https://github.com/Harshgoswamigiri)| Documentations               |
+We welcome contributions from the community! Here's how you can contribute:
 
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### **🤝 Contributing**
-Contributions are welcome! Feel free to fork, create a branch, and submit a pull request.
+### Contributors
 
-### **📜 License**
-This project is licensed under the MIT License.
+| Name | GitHub Profile | Role |
+|------|----------------|------|
+| **Kaustav Das** | [@kaustav3071](https://github.com/kaustav3071) | Backend, Frontend & Database |
+| **Kuresh Garbada** | [@Kuresh-Garbada](https://github.com/Kuresh-Garbada) | Backend |
+| **Bhavya Godhaviya** | [@Bhavya-Godhaviya](https://github.com/Bhavya-Godhaviya) | Diagrams |
+| **Harsh Goswami** | [@Harshgoswamigiri](https://github.com/Harshgoswamigiri) | Documentation |
 
-### **📬 Contact**
-📧 Email: kaustavdas2027@gmail.com<br>
-🔗 LinkedIn: [**Linkedln**](https://www.linkedin.com/in/kaustavdas1703/)<br>
-🌐 Website: [**My Portfolio**](https://kaustavdas.up.railway.app/)
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📬 Contact
+
+**Kaustav Das**
+- 📧 Email: kaustavdas2027@gmail.com
+- 🔗 LinkedIn: [kaustavdas1703](https://www.linkedin.com/in/kaustavdas1703/)
+- 🌐 Portfolio: [kaustavdas.up.railway.app](https://kaustavdas.up.railway.app/)
+- 📱 GitHub: [@kaustav3071](https://github.com/kaustav3071)
+
+---
+
+⭐ **Star this repository** if you found it helpful!
 
